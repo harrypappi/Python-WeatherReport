@@ -1,0 +1,41 @@
+
+def get_weather_data(date):
+
+    weather_data = {
+        "date": date,
+        "temperature": "278.76°C",
+        "wind_speed": "1.6 m/s",
+        "pressure": "1031.934 hPa",
+    }
+    return weather_data
+
+def main():
+    while True:
+        print("Options:")
+        print("1. Get weather")
+        print("2. Get Wind Speed")
+        print("3. Get Pressure")
+        print("0. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == "0":
+            print("Exiting the program.")
+            break
+        elif choice == "1":
+            date = input("Enter the date (YYYY-MM-DD HH:mm:ss): ")
+            weather_data = get_weather_data(date)
+            print(f"Temperature on {date}: {weather_data['temperature']}")
+        elif choice == "2":
+            date = input("Enter the date (YYYY-MM-DD HH:mm:ss): ")
+            weather_data = get_weather_data(date)
+            print(f"Wind Speed on {date}: {weather_data['wind_speed']}")
+        elif choice == "3":
+            date = input("Enter the date (YYYY-MM-DD HH:mm:ss): ")
+            weather_data = get_weather_data(date)
+            print(f"Pressure on {date}: {weather_data['pressure']}")
+        else:
+            print("Invalid choice. Please choose a valid option.")
+
+if __name__ == "__main__":
+    main()
